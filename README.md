@@ -48,6 +48,15 @@ Use fable5-design-doc. I want Fable5 to design the onboarding UX for my desktop 
 4. 使用 `templates/launch-prompt.md` 创建简短启动提示。
 5. 运行 `scripts/check_fable5_design_prompt.py` 验证生成的提示文档。
 
+## 推荐搭配
+
+本技能的澄清门采用 grill-me 风格。推荐搭配 Matt Pocock 的 `grill-me` skill：
+
+- GitHub 仓库：[mattpocock/skills](https://github.com/mattpocock/skills)
+- `grill-me` skill 文件：[skills/productivity/grill-me/SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
+
+如果你的环境已经安装 `grill-me` 或 `grilling`，请优先使用它来完成澄清访谈；如果没有安装，本技能会要求代理模拟同样的一问一答澄清方式。
+
 ## 工作流
 
 1. **分类** - 确认请求符合“适用场景”。

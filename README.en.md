@@ -48,6 +48,15 @@ The skill will:
 4. Create a short launch prompt from `templates/launch-prompt.md`.
 5. Run `scripts/check_fable5_design_prompt.py` to validate the generated prompt document.
 
+## Recommended Companion
+
+This skill uses a grill-me-style clarification gate. It pairs well with Matt Pocock's `grill-me` skill:
+
+- GitHub repository: [mattpocock/skills](https://github.com/mattpocock/skills)
+- `grill-me` skill file: [skills/productivity/grill-me/SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
+
+If your environment has `grill-me` or `grilling` installed, use it for the clarification interview. If not, this skill asks the agent to emulate the same one-question-at-a-time interview pattern.
+
 ## Workflow
 
 1. **Classify** - Confirm the request matches the "When To Use" criteria.
