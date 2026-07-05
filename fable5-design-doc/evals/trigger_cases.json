@@ -1,0 +1,32 @@
+[
+  {
+    "input": "I want Fable5 to design the UX for my app. Make a prompt doc and a short prompt.",
+    "should_trigger": true,
+    "reason": "Explicit Fable5 design-document prompt pack request."
+  },
+  {
+    "input": "让 Fable5 写设计文档，先帮我整理成提示词文档和启动提示词。",
+    "should_trigger": true,
+    "reason": "Chinese request for Fable5 design doc prompt packaging."
+  },
+  {
+    "input": "Use grill-me first so the Fable5 prompt does not drift.",
+    "should_trigger": true,
+    "reason": "Requires the grill gate before prompt generation."
+  },
+  {
+    "input": "Write a PRD for this feature.",
+    "should_trigger": false,
+    "reason": "Ordinary PRD planning belongs to a planning/delivery skill unless Fable5 prompt packaging is requested."
+  },
+  {
+    "input": "Implement this design in React.",
+    "should_trigger": false,
+    "reason": "Implementation is out of scope."
+  },
+  {
+    "input": "Review this design doc for bugs and risks.",
+    "should_trigger": false,
+    "reason": "Review belongs to a review/check skill."
+  }
+]
