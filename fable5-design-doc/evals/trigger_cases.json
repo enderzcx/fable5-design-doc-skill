@@ -10,6 +10,11 @@
     "reason": "Chinese request for Fable5 design doc prompt packaging."
   },
   {
+    "input": "让 Fable5 先出预览图，再写可以照着实现的设计文档；帮我做成提示词包。",
+    "should_trigger": true,
+    "reason": "Requires a reusable Fable5 prompt pack with a visual preview artifact."
+  },
+  {
     "input": "Use grill-me first so the Fable5 prompt does not drift.",
     "should_trigger": true,
     "reason": "Requires the grill gate before prompt generation."

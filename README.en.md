@@ -2,7 +2,7 @@
 
 [中文 README](./README.md)
 
-Fable5 Design Doc Skill is a public-safe prompt packaging skill. It helps you create a reusable prompt document and a short launch prompt for Fable5, or another AI design agent, to produce a design document. The skill includes a mandatory clarification gate, a quality checker, and reusable templates. It is designed for open-source use and does not encode private paths, projects, credentials, or personal preferences.
+Fable5 Design Doc Skill is a public-safe prompt packaging skill. It helps you create a reusable prompt document and a short launch prompt for Fable5, or another AI design agent, to produce a design document anchored by a visual preview. The skill includes a mandatory clarification gate, a visual preview artifact requirement, a quality checker, and reusable templates. It is designed for open-source use and does not encode private paths, projects, credentials, or personal preferences.
 
 ## When To Use
 
@@ -11,6 +11,7 @@ Use this skill when:
 - You want Fable5 to design a product, feature, architecture, UX, workflow, or system.
 - The output should be a durable prompt document that Fable5 can read later.
 - The task has enough ambiguity that a prompt could run off course without clarification.
+- You want Fable5 to produce a preview image, screenshot, or rendered mock for later implementation reference.
 - You need a short launch prompt that points Fable5 to the full prompt document.
 
 ## When Not To Use
@@ -44,9 +45,10 @@ The skill will:
 
 1. Run a grill-me-style clarification interview.
 2. Separate confirmed user boundaries from Fable5-owned decisions.
-3. Create a prompt document from `templates/fable5-design-prompt.md`.
-4. Create a short launch prompt from `templates/launch-prompt.md`.
-5. Run `scripts/check_fable5_design_prompt.py` to validate the generated prompt document.
+3. Require Fable5 to produce an openable, referenceable visual preview artifact.
+4. Create a prompt document from `templates/fable5-design-prompt.md`.
+5. Create a short launch prompt from `templates/launch-prompt.md`.
+6. Run `scripts/check_fable5_design_prompt.py` to validate the generated prompt document.
 
 ## Recommended Companion
 
@@ -62,7 +64,7 @@ If your environment has `grill-me` or `grilling` installed, use it for the clari
 1. **Classify** - Confirm the request matches the "When To Use" criteria.
 2. **Run The Grill Gate** - Conduct a clarification interview, one question at a time, with recommended answers.
 3. **Separate Boundaries** - Write down only confirmed user decisions. Delegate unresolved details to Fable5.
-4. **Create The Prompt Pack** - Use `templates/fable5-design-prompt.md` and `templates/launch-prompt.md`.
+4. **Create The Prompt Pack** - Use `templates/fable5-design-prompt.md` and `templates/launch-prompt.md`, including the visual preview artifact requirement.
 5. **Validate** - Run the checker script and fix missing sections or unresolved placeholders.
 6. **Output** - Return the prompt document path, short launch prompt, checker result, and unresolved assumptions.
 
@@ -96,7 +98,7 @@ After generating a prompt document, run the checker:
 python3 fable5-design-doc/scripts/check_fable5_design_prompt.py path/to/prompt-doc.md
 ```
 
-The checker fails when required sections are missing or template placeholders remain unresolved. Fix every issue before using the prompt.
+The checker fails when required sections, the visual preview section, or template placeholders are missing. Fix every issue before using the prompt.
 
 ## Public Safety Boundary
 

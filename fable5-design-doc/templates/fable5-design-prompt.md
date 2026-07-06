@@ -38,6 +38,26 @@ Required sources:
 
 {{SOURCE_MATERIAL}}
 
+## Visual Preview Artifact
+
+Fable5 must produce a visual preview artifact that the final design document can reference as the implementation guide. Do not silently replace the preview with prose.
+
+Preview goal:
+
+{{PREVIEW_GOAL}}
+
+Preview requirements:
+
+{{PREVIEW_REQUIREMENTS}}
+
+The preview artifact must be one of:
+
+- a generated image, screenshot, or rendered mock/prototype attached or linked in the final answer;
+- a versioned local or remote artifact path the user can open; or
+- if no image, screenshot, prototype, or rendering tool is available, stop and ask the user before proceeding with a text-only substitute.
+
+Use the preview to lock visible layout, hierarchy, density, key states, copy placement, and interaction affordances. In the final design document, reference the preview explicitly and list any details it intentionally leaves unresolved.
+
 ## Optional Delegation
 
 You may delegate research, code reading, competitive review, or critique to other models or agents when useful. Sub-delegates provide facts, options, or reviews. Fable5 owns the final design judgment.
@@ -56,13 +76,14 @@ Produce a design document with these sections unless you have a better structure
 4. Product, UX, or system principles
 5. Information architecture or conceptual model
 6. Core flows
-7. Key surfaces, components, or modules
-8. State model or lifecycle
-9. Frontend, backend, data, or integration contract where applicable
-10. Implementation or delivery sequence
-11. Validation and evidence plan
-12. Risks, non-goals, and open questions
-13. Final recommendation
+7. Visual preview artifact and implementation notes that reference it
+8. Key surfaces, components, or modules
+9. State model or lifecycle
+10. Frontend, backend, data, or integration contract where applicable
+11. Implementation or delivery sequence
+12. Validation and evidence plan
+13. Risks, non-goals, and open questions
+14. Final recommendation
 
 ## Validation Requirements
 
@@ -82,5 +103,7 @@ Required validation:
 - Be direct and decision-complete.
 - Separate confirmed user boundaries from Fable5-owned decisions.
 - Do not claim something has been implemented or verified without evidence.
+- Do not claim a preview artifact exists unless it is attached, linked, or provided at an openable path.
+- Produce the preview artifact before the final recommendation, and make the design document refer back to it as the implementation reference.
 - Do not implement code or mutate external systems unless explicitly asked.
 - Ask only when a decision would change a confirmed boundary, safety limit, verification bar, or implementation route.

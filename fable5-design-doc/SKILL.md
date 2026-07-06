@@ -1,6 +1,6 @@
 ---
 name: fable5-design-doc
-description: Create a public-safe Fable5 design-document prompt pack. Use when the user wants Fable5 to design a product, feature, architecture, UX, workflow, or system and needs a reusable prompt document plus a short launch prompt. Requires a grill-me-style clarification interview before writing. Not for implementing code, writing the final design yourself, ordinary PRDs, debugging, reviews, or one-off copywriting.
+description: Create a public-safe Fable5 design-document prompt pack. Use when the user wants Fable5 to design a product, feature, architecture, UX, workflow, or system and needs a reusable prompt document, visual preview artifact requirement, and short launch prompt. Requires a grill-me-style clarification interview before writing. Not for implementing code, writing the final design yourself, ordinary PRDs, debugging, reviews, or one-off copywriting.
 ---
 
 # Fable5 Design Doc
@@ -8,9 +8,10 @@ description: Create a public-safe Fable5 design-document prompt pack. Use when t
 Use this skill to turn a rough request into a prompt pack for Fable5:
 
 1. a durable prompt document that Fable5 can read;
-2. a short launch prompt that points Fable5 at that document.
+2. a visual preview artifact requirement that Fable5 must satisfy in the final design output;
+3. a short launch prompt that points Fable5 at that document.
 
-The skill owns prompt packaging, clarification, and quality gates. It does not own the final design judgment. Fable5 owns the design.
+The skill owns prompt packaging, clarification, and quality gates. It does not own the final design judgment. Fable5 owns the design. The generated prompt must make the final design document reference a concrete preview image, screenshot, or rendered mock/prototype so later implementation can follow it.
 
 ## Workflow
 
@@ -41,6 +42,7 @@ Clarify these minimum boundaries:
 - Design target: what Fable5 is designing.
 - Primary audience or user.
 - Desired outcome and success criteria.
+- Visual preview expectations: desired form, fidelity, states, real assets or references, and whether Fable5 may generate images or rendered mocks autonomously.
 - What Fable5 decides autonomously.
 - What Fable5 must ask the user before changing.
 - Non-goals and forbidden actions.
@@ -65,6 +67,7 @@ The prompt document must include:
 - confirmed boundaries;
 - Fable5 decision authority;
 - source-reading instructions;
+- visual preview artifact instructions;
 - optional collaborator/model delegation;
 - required final document structure;
 - validation and evidence requirements;
@@ -90,6 +93,7 @@ Return:
 - the prompt document path;
 - the short launch prompt;
 - the checker result;
+- the visual preview requirements captured for Fable5;
 - any unresolved assumptions Fable5 must decide or ask about.
 
 Do not include private paths, private project names, personal preferences, credentials, or organization-specific rules unless the user explicitly wants a private prompt pack.

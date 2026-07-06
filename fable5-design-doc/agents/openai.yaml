@@ -1,4 +1,4 @@
 interface:
   display_name: "Fable5 Design Doc"
-  short_description: "Create Fable5 design-document prompt packs"
+  short_description: "Create Fable5 design-doc prompt packs with visual previews"
   default_prompt: "Create a Fable5 design prompt document and short launch prompt for this design task."

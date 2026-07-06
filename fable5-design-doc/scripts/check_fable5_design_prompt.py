@@ -11,6 +11,7 @@ REQUIRED_PATTERNS = {
     "confirmed boundaries": r"^##\s+Confirmed Boundaries\s*$",
     "fable5 decision authority": r"^##\s+Fable5 Decision Authority\s*$",
     "source material": r"^##\s+Source Material\s*$",
+    "visual preview artifact": r"^##\s+Visual Preview Artifact\s*$",
     "final design document requirements": r"^##\s+Final Design Document Requirements\s*$",
     "validation requirements": r"^##\s+Validation Requirements\s*$",
     "strict non-goals": r"^##\s+Strict Non-Goals\s*$",

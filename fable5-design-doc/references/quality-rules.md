@@ -35,6 +35,10 @@ The final output should be a durable prompt document plus a short launch prompt.
 
 Every generated prompt document should require Fable5 to produce a verifiable design document, not just inspiration. The prompt should demand evidence such as acceptance criteria, review surfaces, screenshots, fixtures, smoke tests, checklists, or other task-appropriate validation.
 
+## A Visual Preview Must Anchor Implementation
+
+Every generated prompt document should require a concrete preview artifact that later implementation can use as a reference. The artifact may be a generated image, screenshot, rendered mock, prototype view, or other openable visual reference. If Fable5 cannot produce or attach one in the current environment, it should stop and ask before substituting a text-only description.
+
 ## Design-Only Boundary
 
 Unless the user explicitly asks otherwise, Fable5 should design and plan. It should not implement code, mutate production state, publish releases, spend money, change accounts, or perform irreversible writes.
